@@ -34,7 +34,7 @@ p{font-family:var(--body);font-size:0.92rem;color:var(--muted);line-height:1.7;t
 .state-desc{font-family:var(--body);font-size:0.82rem;color:var(--muted);line-height:1.65;margin-bottom:10px}
 .state-thoughts-label{font-family:var(--body);font-size:0.8rem;font-weight:700;color:var(--dark);margin-bottom:6px}
 .state-thoughts-list{list-style:none;padding:0;margin:0}
-.state-thoughts-list li{font-family:var(--body);font-size:0.8rem;color:var(--plum);font-style:italic;line-height:1.6;padding:2px 0}
+.state-thoughts-list li{font-family:var(--body);font-size:0.8rem;color:var(--plum);line-height:1.6;padding:2px 0}
 .tools-icon{font-size:2.2rem;text-align:center;display:block}
 .tools-title{font-family:var(--display);font-weight:300;font-size:1.55rem;line-height:1.2;text-align:center;color:var(--dark)}
 .tools-title em{font-style:italic;color:var(--plum)}
@@ -87,33 +87,37 @@ p{font-family:var(--body);font-size:0.92rem;color:var(--muted);line-height:1.7;t
   <div class="state-grid">
     <div class="state-card" onclick="showTools('fight')">
       <div class="state-header"><span class="state-icon-sm">🔥</span><span class="state-label">Fight / Flight</span></div>
-      <div class="state-thoughts-label">Some of us go into fight-or-flight:</div>
-      <ul class="state-thoughts-list">
-        <li>obsessive mirror checking</li>
-        <li>comparison spirals</li>
-        <li>an urge to eat less or start a diet</li>
-        <li>compulsive exercise</li>
-        <li>counting calories, researching cosmetic procedures, or searching for a way to “fix” your body as quickly as possible</li>
+      <div class="state-thoughts-list">
+        <li>Obsessive body checking</li>
+        <li>Comparison spiral</li>
+        <li>Hyper-fixating on what you ate</li>
+        <li>Urge to shrink or eat less</li>
+        <li>Compulsive exercise</li>
+        <li>Searching for a way to “fix” your body ASAP</li>
+        <li>Tense, easily triggered</li>
       </ul>
     </div>
     <div class="state-card" onclick="showTools('dorsal')">
       <div class="state-header"><span class="state-icon-sm">🕯️</span><span class="state-label">Shutdown / Collapse</span></div>
-      <div class="state-thoughts-label">Others go into a freeze state:</div>
-      <ul class="state-thoughts-list">
-        <li>feeling numb</li>
-        <li>disconnected</li>
-        <li>bingeing or over-eating</li>
-        <li>checking out of your body</li>
-        <li>avoiding people</li>
+      <div class="state-thoughts-list">
+        <li>Feeling numb</li>
+        <li>Disconnected</li>
+        <li>Ashamed of body</li>
+        <li>Checked out of your body</li>
+        <li>Bingeing or Over-eating</li>
+        <li>Unmotivated</li>
+        <li>Avoiding people or being seen</li>
       </ul>
     </div>
     <div class="state-card" onclick="showTools('overwhelm')">
       <div class="state-header"><span class="state-icon-sm">💔</span><span class="state-label">Overwhelm</span></div>
-      <div class="state-thoughts-label">Or you may get overwhelmed:</div>
-      <ul class="state-thoughts-list">
-        <li>everything feels “out-of-control”</li>
-        <li>you get shaky, teary, or panicked</li>
-        <li>you don’t know how to make the feelings stop</li>
+      <div class="state-thoughts-list">
+        <li>Everything feels “out-of-control”</li>
+        <li>Panicked</li>
+        <li>You don’t know how to make the feelings stop</li>
+        <li>Feeling trapped</li>
+        <li>Teary-eyed</li>
+        <li>Shakiness</li>
       </ul>
     </div>
   </div>
@@ -181,9 +185,9 @@ p{font-family:var(--body);font-size:0.92rem;color:var(--muted);line-height:1.7;t
 <script>
 var currentState='';
 var states={
-  fight:{icon:'🔥',title:'Your body is trying to<br><em>protect you.</em>',why:'Your nervous system is in high alert, making your body feel like a threat to be managed. In fight/flight, the body feels like an enemy to be conquered. Regulation helps your brain shift out of threat mode so you can access a more grounded, accurate perception of yourself.',quote:'"My nervous system is responding to a threat. I can help it find safety."',tag:'Fight / Flight',tools:[{icon:'💨',label:'Slow your exhale',key:'exhale'},{icon:'🖐️',label:'5-4-3-2-1 Grounding',key:'grounding'},{icon:'💧',label:'Cold water',key:'cold'},{icon:'🤝',label:'Butterfly hug',key:'butterfly'}]},
-  dorsal:{icon:'🕯️',title:'You went from stressed<br>to <em>depleted.</em>',why:'Your nervous system shifted from overwhelmed to shut down — a protective state where feeling less feels safer than feeling everything. Shutdown developed as protection from overwhelming body shame or distress. When your nervous system collapses, feeling your body can seem impossible. Gentle re-activation helps you come back online slowly and safely.',quote:'"I am allowed to take up space."',tag:'Shutdown / Collapse',tools:[{icon:'🎵',label:'Move to music',key:'music'},{icon:'🔥',label:'Create warmth',key:'heat'},{icon:'🗣️',label:'Hum or sing',key:'hum'},{icon:'🌿',label:'Get outside',key:'outside'}]},
-  overwhelm:{icon:'💔',title:'You need care. You can give<br>it to <em>yourself</em> right now.',why:'You’re cycling between activated and collapsed, and your window of tolerance has narrowed. This is exhausting. These practices help your nervous system find ground so you can begin to feel safe in your body again.',quote:'"When it\'s too much to hold alone, I can start by holding myself."',tag:'Overwhelm',tools:[{icon:'🫀',label:'Hand on heart',key:'heart'},{icon:'🌊',label:'Ride the wave',key:'wave'},{icon:'🫂',label:'Self-hold',key:'hold'},{icon:'🌬️',label:'Box breathing',key:'box'}]}
+  fight:{icon:'🔥',title:'Your body is trying to<br><em>protect you.</em>',why:'Your nervous system is in high alert, making your body feel like a threat to be managed. Regulation helps your brain shift out of threat mode so you can access a more grounded, accurate perception of yourself.',quote:'"My nervous system is responding to a threat. I can help it find safety."',tag:'Fight / Flight',tools:[{icon:'💨',label:'Slow your exhale',key:'exhale'},{icon:'🖐️',label:'5-4-3-2-1 Grounding',key:'grounding'},{icon:'💧',label:'Cold water',key:'cold'},{icon:'🤝',label:'Butterfly hug',key:'butterfly'}]},
+  dorsal:{icon:'🕯️',title:'You went from stressed<br>to <em>depleted.</em>',why:'Your nervous system shifted from fight/flight to shut down — a protective state where feeling less feels safer than feeling overwhelming body shame. Gentle re-activation helps you come back online slowly and safely.',quote:'"I am allowed to take up space."',tag:'Shutdown / Collapse',tools:[{icon:'🎵',label:'Move to music',key:'music'},{icon:'🔥',label:'Create warmth',key:'heat'},{icon:'🗣️',label:'Hum or sing',key:'hum'},{icon:'🌿',label:'Get outside',key:'outside'}]},
+  overwhelm:{icon:'💔',title:'You need care. You can give<br>it to <em>yourself</em> right now.',why:'Your window of tolerance has narrowed. What you need right now is connection. These practices help your nervous system feel relief through supportive touch, so you can begin to feel safe in your body again. When you’re ready, seek social support.',quote:'"When it\'s too much to hold alone, I can start by holding myself."',tag:'Overwhelm',tools:[{icon:'🫀',label:'Hand on heart',key:'heart'},{icon:'🌊',label:'Ride the wave',key:'wave'},{icon:'🫂',label:'Self-hold',key:'hold'},{icon:'🌬️',label:'Box breathing',key:'box'}]}
 };
 var practices={
   exhale:{title:'Slow your exhale',body:'A longer exhale activates your parasympathetic nervous system — the part that signals safety.<br><br>Breathe in for <strong>3 counts.</strong><br>Breathe out for <strong>6 counts.</strong><br><br>Repeat four times. The slower the exhale, the faster your nervous system responds. This is one of the most direct ways to move from fight/flight back toward feeling grounded and present.'},
